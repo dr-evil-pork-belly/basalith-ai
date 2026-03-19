@@ -1,26 +1,31 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Space+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --void: #020202;
+  --shell: #080807;
+  --panel: #0C0C0B;
+  --bone: #F0EDE6;
+  --bone2: #B8B4AB;
+  --bone3: #706C65;
+  --bone4: #3A3830;
+  --silver: #C8C4BC;
+  --silver2: #8A8880;
+  --silver3: #4A4844;
+  --silver4: #2A2826;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --mono: 'Space Mono', monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html { scroll-behavior: smooth; background: var(--void); }
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--void);
+  color: var(--bone);
+  font-family: var(--serif);
+  overflow-x: hidden;
+  cursor: none;
 }
+* { box-sizing: border-box; }
