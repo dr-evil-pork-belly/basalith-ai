@@ -89,7 +89,7 @@ export default function Nav() {
         {/* Right CTA + hamburger */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <a
-            href="#"
+            href="#founding"
             style={{
               fontFamily: 'var(--mono)',
               fontSize: '0.5rem',

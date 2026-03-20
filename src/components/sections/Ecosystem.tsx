@@ -38,7 +38,7 @@ export default function Ecosystem() {
     <section
       id="ecosystem"
       ref={ref}
-      style={{ padding: '8rem 0', background: 'var(--shell)' }}
+      style={{ padding: '5rem 0', background: 'var(--shell)' }}
     >
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem' }}>
         <motion.div
@@ -134,8 +134,8 @@ export default function Ecosystem() {
                         fontFamily: 'var(--mono)',
                         fontSize: '0.38rem',
                         letterSpacing: '0.3em',
-                        color: 'var(--bone4)',
-                        border: '1px solid rgba(240,237,230,0.07)',
+                        color: 'var(--bone3)',
+                        border: '1px solid rgba(240,237,230,0.15)',
                         padding: '0.3rem 0.6rem',
                         textTransform: 'uppercase',
                       }}

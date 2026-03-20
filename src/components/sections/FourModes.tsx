@@ -70,7 +70,7 @@ export default function FourModes() {
     <section
       id="modes"
       ref={ref}
-      style={{ padding: '8rem 0', background: 'var(--void)' }}
+      style={{ padding: '5rem 0', background: 'var(--void)' }}
     >
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem' }}>
         <motion.div

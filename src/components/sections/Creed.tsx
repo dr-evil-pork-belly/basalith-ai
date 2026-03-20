@@ -24,7 +24,7 @@ export default function Creed() {
         alignItems: 'center',
         justifyContent: 'center',
         position: 'relative',
-        padding: '8rem 2rem',
+        padding: '6rem 2rem',
         overflow: 'hidden',
         background: 'var(--void)',
       }}
@@ -36,7 +36,7 @@ export default function Creed() {
           fontFamily: 'var(--serif)',
           fontWeight: 700,
           fontSize: '20rem',
-          color: 'rgba(240,237,230,0.018)',
+          color: 'rgba(240,237,230,0.04)',
           userSelect: 'none',
           pointerEvents: 'none',
           lineHeight: 1,

@@ -17,7 +17,7 @@ export default function WhatItIs() {
       id="what"
       ref={ref}
       style={{
-        padding: '8rem 2rem',
+        padding: '5rem 2rem',
         maxWidth: '1200px',
         margin: '0 auto',
       }}

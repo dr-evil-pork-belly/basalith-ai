@@ -83,7 +83,7 @@ function NeuralCanvas({ className }: { className?: string }) {
             ctx.beginPath()
             ctx.moveTo(nodes[i].x, nodes[i].y)
             ctx.lineTo(nodes[j].x, nodes[j].y)
-            ctx.strokeStyle = `rgba(200,196,188,${0.2 * (1 - dist / maxDist)})`
+            ctx.strokeStyle = `rgba(200,196,188,${0.22 * (1 - dist / maxDist)})`
             ctx.lineWidth = 0.5
             ctx.stroke()
           }
@@ -96,7 +96,7 @@ function NeuralCanvas({ className }: { className?: string }) {
         const r = 2 * pulse
         ctx.beginPath()
         ctx.arc(nodes[i].x, nodes[i].y, r, 0, Math.PI * 2)
-        ctx.fillStyle = 'rgba(200,196,188,0.7)'
+        ctx.fillStyle = 'rgba(200,196,188,0.65)'
         ctx.fill()
       }
 
@@ -172,7 +172,7 @@ export default function EntityVisual() {
     <section
       id="entity"
       ref={ref}
-      style={{ background: '#030303', padding: '8rem 0' }}
+      style={{ background: '#030303', padding: '5rem 0' }}
     >
       <div
         style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}

@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 
 function ParticleCanvas() {
@@ -97,7 +97,9 @@ function ParticleCanvas() {
 }
 
 export default function Hero() {
-  const [ctaClicked, setCtaClicked] = useState(false)
+  const scrollToFounding = () => {
+    document.getElementById('founding')?.scrollIntoView({ behavior: 'smooth' })
+  }
 
   const containerVariants = {
     hidden: {},
@@ -181,7 +183,7 @@ export default function Hero() {
         {/* CTAs */}
         <motion.div variants={itemVariants} style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           <button
-            onClick={() => setCtaClicked(true)}
+            onClick={scrollToFounding}
             style={{
               fontFamily: 'var(--mono)',
               fontSize: '0.5rem',
@@ -219,24 +221,6 @@ export default function Hero() {
           </button>
         </motion.div>
 
-        {/* Coming soon message */}
-        {ctaClicked && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            style={{
-              marginTop: '1.5rem',
-              fontFamily: 'var(--mono)',
-              fontSize: '0.48rem',
-              letterSpacing: '0.3em',
-              color: 'var(--silver2)',
-              textTransform: 'uppercase',
-            }}
-          >
-            Coming Soon — Founding Access Opens 2025
-          </motion.div>
-        )}
       </motion.div>
 
       {/* Scroll indicator */}
