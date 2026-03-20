@@ -57,7 +57,7 @@ function PhaseCard({ phase, delay, inView }: { phase: typeof phases[0]; delay: n
         }}
       />
 
-      <div style={{ fontFamily: 'var(--serif)', fontSize: '4rem', fontWeight: 700, color: 'rgba(240,237,230,0.05)', lineHeight: 1, marginBottom: '1.5rem' }}>
+      <div style={{ fontFamily: 'var(--serif)', fontSize: '4rem', fontWeight: 700, color: 'rgba(240,237,230,0.10)', lineHeight: 1, marginBottom: '1.5rem' }}>
         {phase.num}
       </div>
       <div style={{ fontFamily: 'var(--serif)', fontWeight: 700, fontSize: '1.3rem', color: 'var(--silver)', marginBottom: '0.4rem' }}>
@@ -119,7 +119,7 @@ export default function ThreePhases() {
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 1fr)',
           gap: '1px',
-          background: 'rgba(240,237,230,0.05)',
+          background: 'rgba(240,237,230,0.10)',
           maxWidth: '1200px',
           margin: '0 auto',
         }}

@@ -101,8 +101,8 @@ export default function EntityLoader() {
       {/* Lines */}
       {(
         [
-          { s: 'line1' as Step, text: 'Locating provenance records...', color: 'var(--bone3)' },
-          { s: 'line2' as Step, text: 'Authenticating lineage...', color: 'var(--bone3)' },
+          { s: 'line1' as Step, text: 'Locating provenance records...', color: 'var(--bone2)' },
+          { s: 'line2' as Step, text: 'Authenticating lineage...', color: 'var(--bone2)' },
           { s: 'line3' as Step, text: 'Entity active.', color: 'var(--bone)' },
         ] as { s: Step; text: string; color: string }[]
       ).map(({ s, text, color }) => (

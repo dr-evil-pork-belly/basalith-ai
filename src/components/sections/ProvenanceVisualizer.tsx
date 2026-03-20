@@ -199,7 +199,7 @@ export default function ProvenanceVisualizer() {
                       {val}%
                     </span>
                   </div>
-                  <div style={{ height: '2px', background: 'rgba(240,237,230,0.06)', borderRadius: '1px', overflow: 'hidden' }}>
+                  <div style={{ height: '2px', background: 'rgba(240,237,230,0.12)', borderRadius: '1px', overflow: 'hidden' }}>
                     <div
                       style={{
                         height: '100%',
@@ -243,7 +243,7 @@ export default function ProvenanceVisualizer() {
           transition={{ duration: 0.9, ease: 'easeOut', delay: 0.35 }}
           style={{
             textAlign: 'center',
-            borderTop: '1px solid rgba(240,237,230,0.05)',
+            borderTop: '1px solid rgba(240,237,230,0.10)',
             paddingTop: '3rem',
           }}
         >
@@ -264,7 +264,7 @@ export default function ProvenanceVisualizer() {
           -webkit-appearance: none;
           appearance: none;
           height: 2px;
-          background: rgba(240,237,230,0.08);
+          background: rgba(240,237,230,0.16);
           outline: none;
           border: none;
         }

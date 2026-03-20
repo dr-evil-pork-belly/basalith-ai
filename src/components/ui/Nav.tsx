@@ -29,8 +29,8 @@ export default function Nav() {
         right: 0,
         zIndex: 100,
         background: scrolled
-          ? 'rgba(2,2,2,0.98)'
-          : 'linear-gradient(to bottom, rgba(2,2,2,0.8), transparent)',
+          ? 'rgba(8,7,6,0.98)'
+          : 'linear-gradient(to bottom, rgba(8,7,6,0.85), transparent)',
         borderBottom: scrolled ? '1px solid rgba(240,237,230,0.04)' : 'none',
         transition: 'background 0.4s ease, border-bottom 0.4s ease',
       }}
@@ -169,7 +169,7 @@ export default function Nav() {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
             style={{
-              background: 'rgba(2,2,2,0.98)',
+              background: 'rgba(8,7,6,0.98)',
               borderTop: '1px solid rgba(240,237,230,0.04)',
               padding: '1.5rem 2rem',
               display: 'flex',

@@ -113,8 +113,11 @@ function EntityCard({ entity, delay, inView }: { entity: typeof ENTITIES[0]; del
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        background: hovered ? '#0E0E0D' : 'var(--panel)',
-        border: `1px solid ${hovered ? 'rgba(240,237,230,0.12)' : 'rgba(240,237,230,0.06)'}`,
+        background: hovered ? '#1A1816' : 'var(--panel)',
+        borderTop: `1px solid ${hovered ? 'rgba(200,196,188,0.22)' : 'rgba(200,196,188,0.12)'}`,
+        borderRight: `1px solid ${hovered ? 'rgba(240,237,230,0.12)' : 'rgba(240,237,230,0.16)'}`,
+        borderBottom: `1px solid ${hovered ? 'rgba(240,237,230,0.12)' : 'rgba(240,237,230,0.16)'}`,
+        borderLeft: `1px solid ${hovered ? 'rgba(240,237,230,0.12)' : 'rgba(240,237,230,0.16)'}`,
         padding: '1.5rem',
         transition: 'background 0.25s ease, border-color 0.25s ease',
       }}
@@ -160,7 +163,7 @@ function EntityCard({ entity, delay, inView }: { entity: typeof ENTITIES[0]; del
           <span style={{ fontFamily: 'var(--mono)', fontSize: '0.38rem', letterSpacing: '0.15em', color: 'var(--bone4)', textTransform: 'uppercase' }}>Life arc</span>
           <span style={{ fontFamily: 'var(--mono)', fontSize: '0.38rem', letterSpacing: '0.1em', color: 'var(--bone4)' }}>{entity.progress}%</span>
         </div>
-        <div style={{ height: '2px', background: 'rgba(240,237,230,0.06)', borderRadius: '1px', overflow: 'hidden' }}>
+        <div style={{ height: '2px', background: 'rgba(240,237,230,0.12)', borderRadius: '1px', overflow: 'hidden' }}>
           <div style={{ height: '100%', background: 'var(--silver3)', width: `${barW}%`, transition: 'width 1s ease', borderRadius: '1px' }} />
         </div>
       </div>

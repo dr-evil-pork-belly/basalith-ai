@@ -195,7 +195,7 @@ export default function EntityDemo() {
             alignItems: 'center',
             gap: '0',
             background: 'rgba(240,237,230,0.03)',
-            border: '1px solid rgba(240,237,230,0.07)',
+            border: '1px solid rgba(240,237,230,0.14)',
             marginBottom: '0',
             borderBottom: 'none',
           }}
@@ -213,7 +213,7 @@ export default function EntityDemo() {
                 alignItems: 'center',
                 gap: '0.5rem',
                 padding: '0.65rem 1rem',
-                borderRight: i < 3 ? '1px solid rgba(240,237,230,0.07)' : 'none',
+                borderRight: i < 3 ? '1px solid rgba(240,237,230,0.14)' : 'none',
               }}
             >
               {item.pulse && (
@@ -236,7 +236,7 @@ export default function EntityDemo() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.9, ease: 'easeOut', delay: 0.25 }}
           style={{
-            border: '1px solid rgba(240,237,230,0.07)',
+            border: '1px solid rgba(240,237,230,0.14)',
             background: 'var(--panel)',
             display: 'flex',
             flexDirection: 'column',
@@ -260,7 +260,7 @@ export default function EntityDemo() {
                     <EleanorAvatar size={32} />
                   </div>
                 ) : (
-                  <div style={{ width: '32px', height: '32px', background: 'rgba(240,237,230,0.05)', border: '1px solid rgba(240,237,230,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontFamily: 'var(--mono)', fontSize: '0.38rem', color: 'var(--bone4)', letterSpacing: '0.1em' }}>
+                  <div style={{ width: '32px', height: '32px', background: 'rgba(240,237,230,0.10)', border: '1px solid rgba(240,237,230,0.16)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontFamily: 'var(--mono)', fontSize: '0.38rem', color: 'var(--bone4)', letterSpacing: '0.1em' }}>
                     YOU
                   </div>
                 )}
@@ -277,6 +277,9 @@ export default function EntityDemo() {
                     lineHeight: 1.75,
                     color: msg.role === 'eleanor' ? 'var(--bone2)' : 'var(--bone)',
                     textAlign: msg.role === 'user' ? 'right' : 'left',
+                    background: msg.role === 'eleanor' ? 'rgba(240,237,230,0.12)' : 'rgba(240,237,230,0.16)',
+                    border: `1px solid ${msg.role === 'eleanor' ? 'rgba(240,237,230,0.10)' : 'rgba(240,237,230,0.14)'}`,
+                    padding: '0.75rem 1rem',
                   }}>
                     {msg.content}
                   </div>
@@ -348,14 +351,14 @@ export default function EntityDemo() {
                       letterSpacing: '0.1em',
                       color: 'var(--bone4)',
                       background: 'none',
-                      border: '1px solid rgba(240,237,230,0.08)',
+                      border: '1px solid rgba(240,237,230,0.16)',
                       padding: '0.4rem 0.75rem',
                       cursor: 'none',
                       textAlign: 'left',
                       transition: 'border-color 0.2s ease, color 0.2s ease',
                     }}
                     onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(240,237,230,0.2)'; e.currentTarget.style.color = 'var(--bone2)' }}
-                    onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(240,237,230,0.08)'; e.currentTarget.style.color = 'var(--bone4)' }}
+                    onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(240,237,230,0.16)'; e.currentTarget.style.color = 'var(--bone4)' }}
                   >
                     {prompt}
                   </button>
@@ -365,7 +368,7 @@ export default function EntityDemo() {
           </AnimatePresence>
 
           {/* Input area */}
-          <div style={{ borderTop: '1px solid rgba(240,237,230,0.05)', padding: '1rem 1.25rem' }}>
+          <div style={{ borderTop: '1px solid rgba(240,237,230,0.10)', padding: '1rem 1.25rem' }}>
             <div style={{ display: 'flex', gap: '0.75rem', marginBottom: '0.5rem' }}>
               <textarea
                 ref={inputRef}
@@ -379,7 +382,7 @@ export default function EntityDemo() {
                   flex: 1,
                   background: 'transparent',
                   border: 'none',
-                  borderBottom: '1px solid rgba(240,237,230,0.08)',
+                  borderBottom: '1px solid rgba(240,237,230,0.16)',
                   color: 'var(--bone)',
                   fontFamily: 'var(--serif)',
                   fontSize: '1rem',

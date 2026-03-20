@@ -40,7 +40,7 @@ function ParticleCanvas() {
 
       // Radial glow at center
       const grd = ctx.createRadialGradient(width / 2, height / 2, 0, width / 2, height / 2, width * 0.4)
-      grd.addColorStop(0, 'rgba(200,196,188,0.025)')
+      grd.addColorStop(0, 'rgba(200,196,188,0.06)')
       grd.addColorStop(1, 'rgba(200,196,188,0)')
       ctx.fillStyle = grd
       ctx.fillRect(0, 0, width, height)
@@ -70,7 +70,7 @@ function ParticleCanvas() {
             ctx.beginPath()
             ctx.moveTo(particles[i].x, particles[i].y)
             ctx.lineTo(particles[j].x, particles[j].y)
-            ctx.strokeStyle = `rgba(200,196,188,${0.15 * (1 - dist / 80)})`
+            ctx.strokeStyle = `rgba(200,196,188,${0.25 * (1 - dist / 80)})`
             ctx.lineWidth = 0.5
             ctx.stroke()
           }
@@ -139,11 +139,11 @@ export default function Hero() {
       >
         {/* Eyebrow */}
         <motion.div variants={itemVariants} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', marginBottom: '3rem' }}>
-          <span style={{ display: 'block', width: '24px', height: '1px', background: 'var(--silver3)' }} />
+          <span style={{ display: 'block', width: '24px', height: '1px', background: 'rgba(200,196,188,0.25)' }} />
           <span style={{ fontFamily: 'var(--mono)', fontSize: '0.52rem', letterSpacing: '0.55em', color: 'var(--silver2)', textTransform: 'uppercase' }}>
             Basalith · AI · Digital Immortality
           </span>
-          <span style={{ display: 'block', width: '24px', height: '1px', background: 'var(--silver3)' }} />
+          <span style={{ display: 'block', width: '24px', height: '1px', background: 'rgba(200,196,188,0.25)' }} />
         </motion.div>
 
         {/* H1 */}

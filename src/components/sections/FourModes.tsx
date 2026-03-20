@@ -108,7 +108,7 @@ export default function FourModes() {
           display: 'grid',
           gridTemplateColumns: 'repeat(2, 1fr)',
           gap: '1px',
-          background: 'rgba(240,237,230,0.05)',
+          background: 'rgba(240,237,230,0.10)',
           maxWidth: '1200px',
           margin: '0 auto',
         }}

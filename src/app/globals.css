@@ -5,16 +5,16 @@
 @tailwind utilities;
 
 :root {
-  --void: #020202;
-  --shell: #080807;
-  --panel: #0C0C0B;
+  --void: #080706;
+  --shell: #0F0E0C;
+  --panel: #151412;
   --bone: #F0EDE6;
-  --bone2: #B8B4AB;
-  --bone3: #706C65;
-  --bone4: #3A3830;
+  --bone2: #C4C0B7;
+  --bone3: #8A8680;
+  --bone4: #504C48;
   --silver: #C8C4BC;
-  --silver2: #8A8880;
-  --silver3: #4A4844;
+  --silver2: #A0A098;
+  --silver3: #605C58;
   --silver4: #2A2826;
   --serif: 'Cormorant Garamond', Georgia, serif;
   --mono: 'Space Mono', monospace;

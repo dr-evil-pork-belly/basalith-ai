@@ -83,7 +83,7 @@ function ProgressBar({ label, value }: { label: string; value: number }) {
         <span style={{ fontFamily: 'var(--mono)', fontSize: '0.4rem', letterSpacing: '0.2em', color: 'var(--bone4)', textTransform: 'uppercase' }}>{label}</span>
         <span style={{ fontFamily: 'var(--mono)', fontSize: '0.4rem', letterSpacing: '0.1em', color: 'var(--silver3)' }}>{value}%</span>
       </div>
-      <div style={{ height: '2px', background: 'rgba(240,237,230,0.06)', borderRadius: '1px', overflow: 'hidden' }}>
+      <div style={{ height: '2px', background: 'rgba(240,237,230,0.12)', borderRadius: '1px', overflow: 'hidden' }}>
         <div style={{ height: '100%', background: 'var(--silver3)', width: `${width}%`, transition: 'width 1s ease', borderRadius: '1px' }} />
       </div>
     </div>
@@ -120,7 +120,7 @@ function Sidebar({ activeSection, setActiveSection }: { activeSection: string; s
       width: '260px',
       flexShrink: 0,
       background: 'var(--panel)',
-      borderRight: '1px solid rgba(240,237,230,0.05)',
+      borderRight: '1px solid rgba(240,237,230,0.10)',
       display: 'flex',
       flexDirection: 'column',
       height: '100vh',
@@ -129,7 +129,7 @@ function Sidebar({ activeSection, setActiveSection }: { activeSection: string; s
       overflowY: 'auto',
     }} className="dashboard-sidebar">
       {/* Header */}
-      <div style={{ padding: '1.5rem', borderBottom: '1px solid rgba(240,237,230,0.05)' }}>
+      <div style={{ padding: '1.5rem', borderBottom: '1px solid rgba(240,237,230,0.10)' }}>
         <div style={{ fontFamily: 'var(--serif)', fontSize: '0.9rem', color: 'var(--silver)', letterSpacing: '0.05em', marginBottom: '0.2rem' }}>
           BASALITH · <em>ai</em>
         </div>
@@ -139,7 +139,7 @@ function Sidebar({ activeSection, setActiveSection }: { activeSection: string; s
       </div>
 
       {/* Entity identity block */}
-      <div style={{ padding: '1.5rem', borderBottom: '1px solid rgba(240,237,230,0.05)' }}>
+      <div style={{ padding: '1.5rem', borderBottom: '1px solid rgba(240,237,230,0.10)' }}>
         <div style={{ position: 'relative', display: 'inline-block', marginBottom: '1rem' }}>
           <MiniCanvas size={60} />
           <div style={{
@@ -213,7 +213,7 @@ function Sidebar({ activeSection, setActiveSection }: { activeSection: string; s
                     fontSize: '0.36rem',
                     letterSpacing: '0.1em',
                     color: 'var(--bone4)',
-                    border: '1px solid rgba(240,237,230,0.08)',
+                    border: '1px solid rgba(240,237,230,0.16)',
                     padding: '0.1rem 0.4rem',
                   }}>
                     {item.badge}
@@ -226,7 +226,7 @@ function Sidebar({ activeSection, setActiveSection }: { activeSection: string; s
       </div>
 
       {/* Footer */}
-      <div style={{ padding: '1rem 1.5rem', borderTop: '1px solid rgba(240,237,230,0.05)' }}>
+      <div style={{ padding: '1rem 1.5rem', borderTop: '1px solid rgba(240,237,230,0.10)' }}>
         <div style={{ fontFamily: 'var(--mono)', fontSize: '0.36rem', letterSpacing: '0.1em', color: 'var(--bone4)', lineHeight: 1.6 }}>
           Entity initialized March 2024 · Running on Basalith Foundation v2 · Next migration est. 2026
         </div>
@@ -348,7 +348,7 @@ function ConversationPanel() {
           >
             {/* Avatar */}
             {msg.role === 'entity' ? (
-              <div style={{ flexShrink: 0, width: '28px', height: '28px', overflow: 'hidden', border: '1px solid rgba(240,237,230,0.08)' }}>
+              <div style={{ flexShrink: 0, width: '28px', height: '28px', overflow: 'hidden', border: '1px solid rgba(240,237,230,0.16)' }}>
                 <MiniCanvas size={28} />
               </div>
             ) : (
@@ -356,7 +356,7 @@ function ConversationPanel() {
                 flexShrink: 0,
                 width: '28px',
                 height: '28px',
-                background: 'rgba(240,237,230,0.07)',
+                background: 'rgba(240,237,230,0.14)',
                 border: '1px solid rgba(240,237,230,0.1)',
                 display: 'flex',
                 alignItems: 'center',
@@ -386,8 +386,8 @@ function ConversationPanel() {
 
               {/* Bubble */}
               <div style={{
-                background: msg.role === 'entity' ? 'var(--panel)' : 'rgba(240,237,230,0.05)',
-                border: msg.role === 'entity' ? '1px solid rgba(240,237,230,0.05)' : '1px solid rgba(240,237,230,0.08)',
+                background: msg.role === 'entity' ? 'var(--panel)' : 'rgba(240,237,230,0.10)',
+                border: msg.role === 'entity' ? '1px solid rgba(240,237,230,0.10)' : '1px solid rgba(240,237,230,0.16)',
                 padding: '1rem 1.25rem',
                 fontFamily: 'var(--serif)',
                 fontWeight: 300,
@@ -410,10 +410,10 @@ function ConversationPanel() {
               exit={{ opacity: 0 }}
               style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}
             >
-              <div style={{ flexShrink: 0, width: '28px', height: '28px', overflow: 'hidden', border: '1px solid rgba(240,237,230,0.08)' }}>
+              <div style={{ flexShrink: 0, width: '28px', height: '28px', overflow: 'hidden', border: '1px solid rgba(240,237,230,0.16)' }}>
                 <MiniCanvas size={28} />
               </div>
-              <div style={{ background: 'var(--panel)', border: '1px solid rgba(240,237,230,0.05)', padding: '1rem 1.25rem', display: 'flex', gap: '4px', alignItems: 'center' }}>
+              <div style={{ background: 'var(--panel)', border: '1px solid rgba(240,237,230,0.10)', padding: '1rem 1.25rem', display: 'flex', gap: '4px', alignItems: 'center' }}>
                 {[0, 1, 2].map((j) => (
                   <motion.div
                     key={j}
@@ -431,7 +431,7 @@ function ConversationPanel() {
       </div>
 
       {/* Input */}
-      <div style={{ borderTop: '1px solid rgba(240,237,230,0.05)', padding: '1rem 1.5rem' }}>
+      <div style={{ borderTop: '1px solid rgba(240,237,230,0.10)', padding: '1rem 1.5rem' }}>
         <div style={{ display: 'flex', gap: '0.75rem', marginBottom: '0.5rem' }}>
           <textarea
             value={input}
@@ -442,7 +442,7 @@ function ConversationPanel() {
             style={{
               flex: 1,
               background: 'rgba(240,237,230,0.03)',
-              border: '1px solid rgba(240,237,230,0.08)',
+              border: '1px solid rgba(240,237,230,0.16)',
               color: 'var(--bone)',
               fontFamily: 'var(--serif)',
               fontSize: '1rem',
@@ -517,7 +517,7 @@ function SidePanel() {
     <div style={{ width: '360px', flexShrink: 0, overflowY: 'auto', padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }} className="dashboard-side-panel">
 
       {/* Card: Provenance Depth */}
-      <div style={{ background: 'var(--panel)', border: '1px solid rgba(240,237,230,0.06)', padding: '1.25rem' }}>
+      <div style={{ background: 'var(--panel)', border: '1px solid rgba(240,237,230,0.12)', padding: '1.25rem' }}>
         <div style={{ fontFamily: 'var(--mono)', fontSize: '0.44rem', letterSpacing: '0.3em', color: 'var(--silver3)', textTransform: 'uppercase', marginBottom: '1rem' }}>
           Provenance Depth
         </div>
@@ -525,7 +525,7 @@ function SidePanel() {
       </div>
 
       {/* Card: Recent Memories */}
-      <div style={{ background: 'var(--panel)', border: '1px solid rgba(240,237,230,0.06)', padding: '1.25rem' }}>
+      <div style={{ background: 'var(--panel)', border: '1px solid rgba(240,237,230,0.12)', padding: '1.25rem' }}>
         <div style={{ fontFamily: 'var(--mono)', fontSize: '0.44rem', letterSpacing: '0.3em', color: 'var(--silver3)', textTransform: 'uppercase', marginBottom: '1rem' }}>
           Recent Memories
         </div>
@@ -534,7 +534,7 @@ function SidePanel() {
             key={m.date}
             style={{
               padding: '0.6rem 0',
-              borderBottom: '1px solid rgba(240,237,230,0.04)',
+              borderBottom: '1px solid rgba(240,237,230,0.08)',
               cursor: 'none',
               transition: 'padding-left 0.2s ease',
             }}
@@ -552,12 +552,12 @@ function SidePanel() {
       </div>
 
       {/* Card: Family Access */}
-      <div style={{ background: 'var(--panel)', border: '1px solid rgba(240,237,230,0.06)', padding: '1.25rem' }}>
+      <div style={{ background: 'var(--panel)', border: '1px solid rgba(240,237,230,0.12)', padding: '1.25rem' }}>
         <div style={{ fontFamily: 'var(--mono)', fontSize: '0.44rem', letterSpacing: '0.3em', color: 'var(--silver3)', textTransform: 'uppercase', marginBottom: '1rem' }}>
           Family Access
         </div>
         {family.map((f) => (
-          <div key={f.name} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.5rem 0', borderBottom: '1px solid rgba(240,237,230,0.04)' }}>
+          <div key={f.name} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.5rem 0', borderBottom: '1px solid rgba(240,237,230,0.08)' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: f.dot, flexShrink: 0 }} />
               <span style={{ fontFamily: 'var(--serif)', fontWeight: 300, fontSize: '0.9rem', color: 'var(--bone2)' }}>{f.name}</span>
@@ -568,7 +568,7 @@ function SidePanel() {
       </div>
 
       {/* Card: Model Status */}
-      <div style={{ background: 'var(--panel)', border: '1px solid rgba(240,237,230,0.06)', padding: '1.25rem' }}>
+      <div style={{ background: 'var(--panel)', border: '1px solid rgba(240,237,230,0.12)', padding: '1.25rem' }}>
         <div style={{ fontFamily: 'var(--mono)', fontSize: '0.44rem', letterSpacing: '0.3em', color: 'var(--silver3)', textTransform: 'uppercase', marginBottom: '1rem' }}>
           Model Status
         </div>
@@ -579,7 +579,7 @@ function SidePanel() {
           { key: 'Total queries', val: '4,291' },
           { key: 'Running since', val: 'March 2024' },
         ].map((row) => (
-          <div key={row.key} style={{ display: 'flex', justifyContent: 'space-between', padding: '0.45rem 0', borderBottom: '1px solid rgba(240,237,230,0.04)' }}>
+          <div key={row.key} style={{ display: 'flex', justifyContent: 'space-between', padding: '0.45rem 0', borderBottom: '1px solid rgba(240,237,230,0.08)' }}>
             <span style={{ fontFamily: 'var(--mono)', fontSize: '0.4rem', letterSpacing: '0.15em', color: 'var(--bone4)', textTransform: 'uppercase' }}>{row.key}</span>
             <span style={{ fontFamily: 'var(--mono)', fontSize: '0.4rem', letterSpacing: '0.12em', color: row.green ? '#4ade80' : 'var(--bone3)' }}>{row.val}</span>
           </div>
@@ -587,7 +587,7 @@ function SidePanel() {
       </div>
 
       {/* Card: Deposit Content */}
-      <div style={{ background: 'var(--panel)', border: '1px solid rgba(240,237,230,0.06)', padding: '1.25rem' }}>
+      <div style={{ background: 'var(--panel)', border: '1px solid rgba(240,237,230,0.12)', padding: '1.25rem' }}>
         <div style={{ fontFamily: 'var(--mono)', fontSize: '0.44rem', letterSpacing: '0.3em', color: 'var(--silver3)', textTransform: 'uppercase', marginBottom: '1rem' }}>
           Deposit Content
         </div>
@@ -627,7 +627,7 @@ export default function Dashboard() {
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
         {/* Header */}
         <div style={{
-          borderBottom: '1px solid rgba(240,237,230,0.05)',
+          borderBottom: '1px solid rgba(240,237,230,0.10)',
           padding: '1rem 1.5rem',
           display: 'flex',
           alignItems: 'center',
@@ -655,7 +655,7 @@ export default function Dashboard() {
                   fontSize: '0.44rem',
                   letterSpacing: '0.2em',
                   color: activeMode === mode ? 'var(--silver)' : 'var(--bone3)',
-                  background: activeMode === mode ? 'rgba(240,237,230,0.07)' : 'none',
+                  background: activeMode === mode ? 'rgba(240,237,230,0.14)' : 'none',
                   border: 'none',
                   padding: '0.4rem 0.75rem',
                   cursor: 'none',
@@ -672,7 +672,7 @@ export default function Dashboard() {
         {/* Main two-column area */}
         <div style={{ flex: 1, display: 'flex', overflow: 'hidden' }}>
           <ConversationPanel />
-          <div style={{ borderLeft: '1px solid rgba(240,237,230,0.05)' }}>
+          <div style={{ borderLeft: '1px solid rgba(240,237,230,0.10)' }}>
             <SidePanel />
           </div>
         </div>

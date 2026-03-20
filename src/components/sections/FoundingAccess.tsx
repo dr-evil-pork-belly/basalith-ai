@@ -67,7 +67,7 @@ export default function FoundingAccess() {
       style={{
         background: 'var(--shell)',
         padding: '5rem 2rem',
-        borderTop: '1px solid rgba(240,237,230,0.05)',
+        borderTop: '1px solid rgba(240,237,230,0.10)',
       }}
     >
       <div style={{ maxWidth: '680px', margin: '0 auto' }}>

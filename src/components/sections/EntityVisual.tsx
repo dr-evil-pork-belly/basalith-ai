@@ -212,7 +212,7 @@ export default function EntityVisual() {
           </h2>
 
           {/* Stats table */}
-          <div style={{ border: '1px solid rgba(240,237,230,0.07)', marginBottom: '2.5rem' }}>
+          <div style={{ border: '1px solid rgba(240,237,230,0.14)', marginBottom: '2.5rem' }}>
             {stats.map((s, i) => (
               <div
                 key={s.label}
@@ -220,7 +220,7 @@ export default function EntityVisual() {
                   display: 'flex',
                   justifyContent: 'space-between',
                   padding: '0.7rem 1rem',
-                  borderBottom: i < stats.length - 1 ? '1px solid rgba(240,237,230,0.04)' : 'none',
+                  borderBottom: i < stats.length - 1 ? '1px solid rgba(240,237,230,0.08)' : 'none',
                   gap: '1rem',
                 }}
               >
