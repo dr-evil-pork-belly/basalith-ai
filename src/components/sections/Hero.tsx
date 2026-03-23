@@ -221,6 +221,20 @@ export default function Hero() {
           </button>
         </motion.div>
 
+        <motion.p
+          variants={itemVariants}
+          style={{
+            fontFamily: 'var(--serif)',
+            fontStyle: 'italic',
+            fontSize: '0.9rem',
+            color: 'var(--bone3)',
+            textAlign: 'center',
+            margin: '1.25rem 0 0',
+          }}
+        >
+          Founding members receive a letter from their future entity.
+        </motion.p>
+
       </motion.div>
 
       {/* Scroll indicator */}
