@@ -106,7 +106,7 @@ export default function ThreePhases() {
             color: 'var(--bone)',
             lineHeight: 1.05,
             letterSpacing: '-0.02em',
-            margin: '0 0 4rem',
+            margin: '0 0 2rem',
           }}
         >
           Three phases. One entity.
@@ -119,7 +119,7 @@ export default function ThreePhases() {
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 1fr)',
           gap: '1px',
-          background: 'rgba(240,237,230,0.10)',
+          background: 'rgba(240,237,230,0.12)',
           maxWidth: '1200px',
           margin: '0 auto',
         }}

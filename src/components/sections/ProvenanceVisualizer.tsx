@@ -123,7 +123,7 @@ export default function ProvenanceVisualizer() {
     <section
       id="provenance-depth"
       ref={ref}
-      style={{ background: 'var(--shell)', padding: '5rem 2rem' }}
+      style={{ background: 'var(--shell)', padding: '5rem 2rem 2.5rem' }}
     >
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
         {/* Header */}
@@ -182,7 +182,7 @@ export default function ProvenanceVisualizer() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.9, ease: 'easeOut', delay: 0.25 }}
-          style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', marginBottom: '4rem' }}
+          style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', marginBottom: '2rem' }}
           className="prov-grid"
         >
           {/* Bars */}
@@ -243,7 +243,7 @@ export default function ProvenanceVisualizer() {
           transition={{ duration: 0.9, ease: 'easeOut', delay: 0.35 }}
           style={{
             textAlign: 'center',
-            borderTop: '1px solid rgba(240,237,230,0.10)',
+            borderTop: '1px solid rgba(240,237,230,0.12)',
             paddingTop: '3rem',
           }}
         >

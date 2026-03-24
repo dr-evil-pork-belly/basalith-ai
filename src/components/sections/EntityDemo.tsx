@@ -67,7 +67,7 @@ function EleanorAvatar({ size = 32 }: { size?: number }) {
     return () => cancelAnimationFrame(animId)
   }, [size])
 
-  return <canvas ref={canvasRef} width={size} height={size} style={{ display: 'block', flexShrink: 0 }} />
+  return <canvas ref={canvasRef} width={size} height={size} style={{ display: 'block', flexShrink: 0, border: '1px solid rgba(212,208,200,0.2)' }} />
 }
 
 // ─── Types ─────────────────────────────────────────────────────────────────────
@@ -194,10 +194,11 @@ export default function EntityDemo() {
             display: 'flex',
             alignItems: 'center',
             gap: '0',
-            background: 'rgba(240,237,230,0.03)',
-            border: '1px solid rgba(240,237,230,0.14)',
+            background: 'rgba(212,208,200,0.06)',
+            border: '1px solid rgba(212,208,200,0.15)',
+            borderTop: '2px solid rgba(212,208,200,0.25)',
+            borderBottom: '1px solid rgba(212,208,200,0.12)',
             marginBottom: '0',
-            borderBottom: 'none',
           }}
         >
           {[
@@ -213,7 +214,7 @@ export default function EntityDemo() {
                 alignItems: 'center',
                 gap: '0.5rem',
                 padding: '0.65rem 1rem',
-                borderRight: i < 3 ? '1px solid rgba(240,237,230,0.14)' : 'none',
+                borderRight: i < 3 ? '1px solid rgba(212,208,200,0.12)' : 'none',
               }}
             >
               {item.pulse && (
@@ -223,7 +224,7 @@ export default function EntityDemo() {
                   style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#4ade80', flexShrink: 0 }}
                 />
               )}
-              <span style={{ fontFamily: 'var(--mono)', fontSize: '0.44rem', letterSpacing: '0.25em', color: 'var(--silver3)', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
+              <span style={{ fontFamily: 'var(--mono)', fontSize: '0.44rem', letterSpacing: '0.25em', color: 'var(--bone3)', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
                 {item.label}
               </span>
             </div>
@@ -236,8 +237,9 @@ export default function EntityDemo() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.9, ease: 'easeOut', delay: 0.25 }}
           style={{
-            border: '1px solid rgba(240,237,230,0.14)',
-            background: 'var(--panel)',
+            border: '1px solid rgba(212,208,200,0.15)',
+            borderTop: 'none',
+            background: '#111110',
             display: 'flex',
             flexDirection: 'column',
             height: '480px',
@@ -277,8 +279,8 @@ export default function EntityDemo() {
                     lineHeight: 1.75,
                     color: msg.role === 'eleanor' ? 'var(--bone2)' : 'var(--bone)',
                     textAlign: msg.role === 'user' ? 'right' : 'left',
-                    background: msg.role === 'eleanor' ? 'rgba(240,237,230,0.12)' : 'rgba(240,237,230,0.16)',
-                    border: `1px solid ${msg.role === 'eleanor' ? 'rgba(240,237,230,0.10)' : 'rgba(240,237,230,0.14)'}`,
+                    background: msg.role === 'eleanor' ? 'rgba(212,208,200,0.07)' : 'rgba(240,237,230,0.10)',
+                    border: `1px solid ${msg.role === 'eleanor' ? 'rgba(212,208,200,0.12)' : 'rgba(240,237,230,0.16)'}`,
                     padding: '0.75rem 1rem',
                   }}>
                     {msg.content}
@@ -349,16 +351,16 @@ export default function EntityDemo() {
                       fontFamily: 'var(--mono)',
                       fontSize: '0.44rem',
                       letterSpacing: '0.1em',
-                      color: 'var(--bone4)',
-                      background: 'none',
-                      border: '1px solid rgba(240,237,230,0.16)',
+                      color: 'var(--bone3)',
+                      background: 'rgba(212,208,200,0.04)',
+                      border: '1px solid rgba(212,208,200,0.18)',
                       padding: '0.4rem 0.75rem',
                       cursor: 'none',
                       textAlign: 'left',
-                      transition: 'border-color 0.2s ease, color 0.2s ease',
+                      transition: 'border-color 0.2s ease, color 0.2s ease, background 0.2s ease',
                     }}
-                    onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(240,237,230,0.2)'; e.currentTarget.style.color = 'var(--bone2)' }}
-                    onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(240,237,230,0.16)'; e.currentTarget.style.color = 'var(--bone4)' }}
+                    onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(212,208,200,0.35)'; e.currentTarget.style.color = 'var(--bone2)'; e.currentTarget.style.background = 'rgba(212,208,200,0.08)' }}
+                    onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(212,208,200,0.18)'; e.currentTarget.style.color = 'var(--bone3)'; e.currentTarget.style.background = 'rgba(212,208,200,0.04)' }}
                   >
                     {prompt}
                   </button>
@@ -368,7 +370,7 @@ export default function EntityDemo() {
           </AnimatePresence>
 
           {/* Input area */}
-          <div style={{ borderTop: '1px solid rgba(240,237,230,0.10)', padding: '1rem 1.25rem' }}>
+          <div style={{ borderTop: '1px solid rgba(212,208,200,0.12)', padding: '1rem 1.25rem' }}>
             <div style={{ display: 'flex', gap: '0.75rem', marginBottom: '0.5rem' }}>
               <textarea
                 ref={inputRef}
@@ -377,12 +379,13 @@ export default function EntityDemo() {
                 onKeyDown={handleKey}
                 disabled={loading}
                 placeholder="Ask Eleanor anything..."
+                className="eleanor-input"
                 rows={2}
                 style={{
                   flex: 1,
                   background: 'transparent',
                   border: 'none',
-                  borderBottom: '1px solid rgba(240,237,230,0.16)',
+                  borderBottom: '1px solid rgba(212,208,200,0.25)',
                   color: 'var(--bone)',
                   fontFamily: 'var(--serif)',
                   fontSize: '1rem',
@@ -423,6 +426,7 @@ export default function EntityDemo() {
           </div>
         </motion.div>
       </div>
+      <style>{`.eleanor-input::placeholder { color: var(--bone4); opacity: 1; }`}</style>
     </section>
   )
 }

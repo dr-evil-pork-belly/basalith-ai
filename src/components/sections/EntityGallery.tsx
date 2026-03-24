@@ -216,7 +216,7 @@ export default function EntityGallery() {
 
         {/* Grid */}
         <div
-          style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1px', background: 'rgba(240,237,230,0.04)', marginBottom: '3rem' }}
+          style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1px', background: 'rgba(240,237,230,0.08)', marginBottom: '2rem' }}
           className="gallery-grid"
         >
           {ENTITIES.map((entity, i) => (

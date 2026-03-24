@@ -13,6 +13,7 @@ const navLinks = [
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [ecosystemHover, setEcosystemHover] = useState(false)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -47,13 +48,12 @@ export default function Nav() {
         }}
       >
         {/* Logo */}
-        <a href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'baseline', gap: '0.25rem' }}>
+        <a href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'baseline' }}>
           <span style={{ fontFamily: 'var(--serif)', fontSize: '1rem', fontWeight: 700, color: 'var(--silver)', letterSpacing: '0.05em' }}>
             BASALITH
           </span>
-          <span style={{ fontFamily: 'var(--serif)', fontSize: '0.85rem', fontStyle: 'italic', color: 'var(--bone3)' }}>
-            · ai
-          </span>
+          <span style={{ fontFamily: 'var(--serif)', fontSize: '1rem', fontWeight: 300, color: 'var(--silver3)', margin: '0 0.3em' }}>·</span>
+          <span style={{ fontFamily: 'var(--serif)', fontSize: '0.85em', fontStyle: 'italic', fontWeight: 300, color: 'var(--bone3)' }}>ai</span>
         </a>
 
         {/* Center links — desktop */}
@@ -87,7 +87,48 @@ export default function Nav() {
         </div>
 
         {/* Right CTA + hamburger */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+          {/* Ecosystem indicator — desktop only */}
+          <div
+            className="nav-desktop-links"
+            style={{ position: 'relative' }}
+            onMouseEnter={() => setEcosystemHover(true)}
+            onMouseLeave={() => setEcosystemHover(false)}
+          >
+            <span style={{ fontFamily: 'var(--mono)', fontSize: '0.4rem', letterSpacing: '0.25em', color: 'var(--bone4)', textTransform: 'lowercase', cursor: 'none' }}>
+              basalith ecosystem
+            </span>
+            <AnimatePresence>
+              {ecosystemHover && (
+                <motion.div
+                  initial={{ opacity: 0, y: -4 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -4 }}
+                  transition={{ duration: 0.15 }}
+                  style={{
+                    position: 'absolute',
+                    top: 'calc(100% + 0.75rem)',
+                    right: 0,
+                    display: 'flex',
+                    gap: '0.5rem',
+                    alignItems: 'center',
+                    background: 'rgba(8,7,6,0.98)',
+                    padding: '0.5rem 0.75rem',
+                    border: '1px solid rgba(240,237,230,0.08)',
+                    whiteSpace: 'nowrap',
+                    zIndex: 200,
+                  }}
+                >
+                  <a href="https://basalith.life" style={{ fontFamily: 'var(--mono)', fontSize: '0.38rem', letterSpacing: '0.15em', color: 'var(--bone3)', textDecoration: 'none' }}>.life</a>
+                  <span style={{ color: 'var(--bone4)', fontSize: '0.5rem' }}>·</span>
+                  <a href="https://basalith.xyz" style={{ fontFamily: 'var(--mono)', fontSize: '0.38rem', letterSpacing: '0.15em', color: 'var(--bone3)', textDecoration: 'none' }}>.xyz</a>
+                  <span style={{ color: 'var(--bone4)', fontSize: '0.5rem' }}>·</span>
+                  <span style={{ fontFamily: 'var(--mono)', fontSize: '0.38rem', letterSpacing: '0.15em', color: 'var(--bone4)' }}>.ai</span>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
           <a
             href="#founding"
             style={{

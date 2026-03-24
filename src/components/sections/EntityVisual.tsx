@@ -220,7 +220,7 @@ export default function EntityVisual() {
                   display: 'flex',
                   justifyContent: 'space-between',
                   padding: '0.7rem 1rem',
-                  borderBottom: i < stats.length - 1 ? '1px solid rgba(240,237,230,0.08)' : 'none',
+                  borderBottom: i < stats.length - 1 ? '1px solid rgba(240,237,230,0.18)' : 'none',
                   gap: '1rem',
                 }}
               >

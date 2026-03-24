@@ -95,7 +95,7 @@ export default function FourModes() {
             color: 'var(--bone)',
             lineHeight: 1.05,
             letterSpacing: '-0.02em',
-            margin: '0 0 4rem',
+            margin: '0 0 2rem',
           }}
         >
           Four modes. One presence.
@@ -108,7 +108,7 @@ export default function FourModes() {
           display: 'grid',
           gridTemplateColumns: 'repeat(2, 1fr)',
           gap: '1px',
-          background: 'rgba(240,237,230,0.10)',
+          background: 'rgba(240,237,230,0.12)',
           maxWidth: '1200px',
           margin: '0 auto',
         }}

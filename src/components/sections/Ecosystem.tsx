@@ -90,8 +90,8 @@ export default function Ecosystem() {
                 display: 'grid',
                 gridTemplateColumns: '180px 1px 1fr',
                 gap: '0 2.5rem',
-                border: '1px solid rgba(240,237,230,0.10)',
-                borderTop: i === 0 ? '1px solid rgba(240,237,230,0.10)' : 'none',
+                border: '1px solid rgba(240,237,230,0.12)',
+                borderTop: i === 0 ? '1px solid rgba(240,237,230,0.12)' : 'none',
                 padding: '2.5rem 0',
                 alignItems: 'start',
               }}
