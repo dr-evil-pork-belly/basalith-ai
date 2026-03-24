@@ -190,6 +190,7 @@ export default function EntityDemo() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.9, ease: 'easeOut', delay: 0.15 }}
+          className="eleanor-status"
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -209,6 +210,7 @@ export default function EntityDemo() {
           ].map((item, i) => (
             <div
               key={item.label}
+              className={i === 3 ? 'status-last' : undefined}
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -426,7 +428,14 @@ export default function EntityDemo() {
           </div>
         </motion.div>
       </div>
-      <style>{`.eleanor-input::placeholder { color: var(--bone4); opacity: 1; }`}</style>
+      <style>{`
+        .eleanor-input::placeholder { color: var(--bone4); opacity: 1; }
+        @media (max-width: 768px) {
+          .eleanor-status { flex-wrap: wrap; overflow: hidden; }
+          .eleanor-status > div { font-size: 0.38rem !important; padding: 0.3rem 0.6rem !important; }
+          .status-last { display: none !important; }
+        }
+      `}</style>
     </section>
   )
 }

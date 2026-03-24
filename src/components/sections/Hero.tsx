@@ -136,6 +136,7 @@ export default function Hero() {
           padding: '0 2rem',
           maxWidth: '900px',
         }}
+        className="hero-content"
       >
         {/* Eyebrow */}
         <motion.div variants={itemVariants} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', marginBottom: '3rem' }}>
@@ -149,6 +150,7 @@ export default function Hero() {
         {/* H1 */}
         <motion.h1
           variants={itemVariants}
+          className="hero-h1"
           style={{
             fontFamily: 'var(--serif)',
             fontWeight: 700,
@@ -156,6 +158,8 @@ export default function Hero() {
             lineHeight: 0.86,
             letterSpacing: '-0.04em',
             margin: '0 0 2.5rem',
+            overflow: 'hidden',
+            width: '100%',
           }}
         >
           <span style={{ display: 'block', color: 'rgba(240,237,230,0.18)' }}>YOU WILL</span>
@@ -181,9 +185,10 @@ export default function Hero() {
         </motion.p>
 
         {/* CTAs */}
-        <motion.div variants={itemVariants} style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+        <motion.div variants={itemVariants} className="hero-ctas" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           <button
             onClick={scrollToFounding}
+            className="hero-cta-primary"
             style={{
               fontFamily: 'var(--mono)',
               fontSize: '0.5rem',
@@ -202,6 +207,7 @@ export default function Hero() {
             Initialize Your Entity
           </button>
           <button
+            className="hero-cta-ghost"
             style={{
               fontFamily: 'var(--mono)',
               fontSize: '0.5rem',
@@ -223,6 +229,7 @@ export default function Hero() {
 
         <motion.p
           variants={itemVariants}
+          className="hero-note"
           style={{
             fontFamily: 'var(--serif)',
             fontStyle: 'italic',
@@ -236,6 +243,32 @@ export default function Hero() {
         </motion.p>
 
       </motion.div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .hero-content { padding: 6rem 1.5rem 3rem !important; }
+          .hero-h1 { font-size: clamp(2.8rem, 14vw, 10.5rem) !important; }
+          .hero-h1 span { white-space: normal; width: 100%; }
+          .hero-ctas { flex-direction: column; align-items: stretch; }
+          .hero-cta-primary {
+            width: 100% !important;
+            background: rgba(200,196,188,0.9) !important;
+            color: #080706 !important;
+            padding: 1rem 1.5rem !important;
+          }
+          .hero-cta-ghost {
+            width: 100% !important;
+            border: 1px solid rgba(200,196,188,0.4) !important;
+            color: rgba(200,196,188,0.8) !important;
+            padding: 1rem 1.5rem !important;
+          }
+          .hero-note {
+            color: rgba(200,196,188,0.6) !important;
+            font-size: 0.85rem !important;
+            padding: 0 1.5rem !important;
+          }
+        }
+      `}</style>
 
       {/* Scroll indicator */}
       <div

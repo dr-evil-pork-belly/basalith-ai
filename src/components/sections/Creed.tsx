@@ -16,6 +16,7 @@ export default function Creed() {
 
   return (
     <section
+      id="creed"
       ref={ref}
       style={{
         minHeight: '100vh',

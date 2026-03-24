@@ -73,6 +73,10 @@ function NeuralCanvas({ className }: { className?: string }) {
         if (n.y > height) n.y = 0
       }
 
+      const isMobile = width < 400
+      const nodeOpacity = isMobile ? 0.8 : 0.65
+      const connOpacity = isMobile ? 0.3 : 0.22
+
       // Connections
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
@@ -83,7 +87,7 @@ function NeuralCanvas({ className }: { className?: string }) {
             ctx.beginPath()
             ctx.moveTo(nodes[i].x, nodes[i].y)
             ctx.lineTo(nodes[j].x, nodes[j].y)
-            ctx.strokeStyle = `rgba(200,196,188,${0.22 * (1 - dist / maxDist)})`
+            ctx.strokeStyle = `rgba(200,196,188,${connOpacity * (1 - dist / maxDist)})`
             ctx.lineWidth = 0.5
             ctx.stroke()
           }
@@ -96,7 +100,7 @@ function NeuralCanvas({ className }: { className?: string }) {
         const r = 2 * pulse
         ctx.beginPath()
         ctx.arc(nodes[i].x, nodes[i].y, r, 0, Math.PI * 2)
-        ctx.fillStyle = 'rgba(200,196,188,0.65)'
+        ctx.fillStyle = `rgba(200,196,188,${nodeOpacity})`
         ctx.fill()
       }
 
@@ -138,7 +142,7 @@ function NeuralCanvas({ className }: { className?: string }) {
           transition={{ duration: 2, repeat: Infinity }}
           style={{ width: '5px', height: '5px', borderRadius: '50%', background: 'var(--silver3)' }}
         />
-        <span style={{ fontFamily: 'var(--mono)', fontSize: '0.44rem', letterSpacing: '0.25em', color: 'var(--silver3)', textTransform: 'uppercase' }}>
+        <span className="entity-label-text" style={{ fontFamily: 'var(--mono)', fontSize: '0.44rem', letterSpacing: '0.25em', color: 'var(--silver3)', textTransform: 'uppercase' }}>
           Entity · Active · Learning
         </span>
       </div>
@@ -183,6 +187,7 @@ export default function EntityVisual() {
           initial={{ opacity: 0, x: -20 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
           transition={{ duration: 0.9, ease: 'easeOut' }}
+          className="entity-canvas-wrap"
           style={{ height: '500px' }}
         >
           <NeuralCanvas />
@@ -256,6 +261,8 @@ export default function EntityVisual() {
       <style>{`
         @media (max-width: 768px) {
           .entity-grid { grid-template-columns: 1fr !important; }
+          .entity-canvas-wrap { height: 200px !important; min-height: 200px !important; }
+          .entity-label-text { font-size: 0.38rem !important; letter-spacing: 0.2em !important; }
         }
       `}</style>
     </section>

@@ -34,6 +34,7 @@ function PhaseCard({ phase, delay, inView }: { phase: typeof phases[0]; delay: n
       transition={{ duration: 0.9, ease: 'easeOut', delay }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      className="phase-card"
       style={{
         background: hovered ? '#070706' : 'var(--void)',
         padding: '3rem 2.5rem',
@@ -57,7 +58,7 @@ function PhaseCard({ phase, delay, inView }: { phase: typeof phases[0]; delay: n
         }}
       />
 
-      <div style={{ fontFamily: 'var(--serif)', fontSize: '4rem', fontWeight: 700, color: 'rgba(240,237,230,0.10)', lineHeight: 1, marginBottom: '1.5rem' }}>
+      <div className="phase-num" style={{ fontFamily: 'var(--serif)', fontSize: '4rem', fontWeight: 700, color: 'rgba(240,237,230,0.10)', lineHeight: 1, marginBottom: '1.5rem' }}>
         {phase.num}
       </div>
       <div style={{ fontFamily: 'var(--serif)', fontWeight: 700, fontSize: '1.3rem', color: 'var(--silver)', marginBottom: '0.4rem' }}>
@@ -132,7 +133,10 @@ export default function ThreePhases() {
 
       <style>{`
         @media (max-width: 768px) {
-          .phases-grid { grid-template-columns: 1fr !important; }
+          .phases-grid { grid-template-columns: 1fr !important; background: none !important; }
+          .phase-card { padding: 1.5rem 1.25rem !important; border-top: 1px solid rgba(200,196,188,0.12) !important; }
+          .phase-num { color: rgba(200,196,188,0.12) !important; }
+          .phase-card p { color: rgba(220,216,208,0.85) !important; font-size: 0.95rem !important; line-height: 1.8 !important; }
         }
       `}</style>
     </section>

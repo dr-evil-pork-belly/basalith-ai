@@ -160,7 +160,7 @@ export default function Nav() {
               cursor: 'none',
               padding: '0.5rem',
               flexDirection: 'column' as const,
-              gap: '5px',
+              gap: '6px',
               display: 'none',
             }}
             aria-label="Toggle menu"
@@ -169,8 +169,8 @@ export default function Nav() {
               style={{
                 display: 'block',
                 width: '22px',
-                height: '1px',
-                background: 'var(--silver3)',
+                height: '1.5px',
+                background: 'rgba(200,196,188,0.8)',
                 transition: 'transform 0.3s ease, opacity 0.3s ease',
                 transformOrigin: 'center',
                 transform: mobileOpen ? 'rotate(45deg) translate(4px, 4px)' : 'none',
@@ -180,8 +180,8 @@ export default function Nav() {
               style={{
                 display: 'block',
                 width: '22px',
-                height: '1px',
-                background: 'var(--silver3)',
+                height: '1.5px',
+                background: 'rgba(200,196,188,0.8)',
                 transition: 'opacity 0.3s ease',
                 opacity: mobileOpen ? 0 : 1,
               }}
@@ -190,8 +190,8 @@ export default function Nav() {
               style={{
                 display: 'block',
                 width: '22px',
-                height: '1px',
-                background: 'var(--silver3)',
+                height: '1.5px',
+                background: 'rgba(200,196,188,0.8)',
                 transition: 'transform 0.3s ease, opacity 0.3s ease',
                 transformOrigin: 'center',
                 transform: mobileOpen ? 'rotate(-45deg) translate(4px, -4px)' : 'none',
@@ -210,12 +210,12 @@ export default function Nav() {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
             style={{
-              background: 'rgba(8,7,6,0.98)',
-              borderTop: '1px solid rgba(240,237,230,0.04)',
-              padding: '1.5rem 2rem',
+              background: 'rgba(8,7,6,0.99)',
+              borderTop: '1px solid rgba(240,237,230,0.08)',
+              padding: '0.5rem 0',
               display: 'flex',
               flexDirection: 'column',
-              gap: '1.5rem',
+              gap: '0',
             }}
             className="nav-mobile-dropdown"
           >
@@ -228,9 +228,11 @@ export default function Nav() {
                   fontFamily: 'var(--mono)',
                   fontSize: '0.55rem',
                   letterSpacing: '0.35em',
-                  color: 'var(--bone3)',
+                  color: 'var(--bone2)',
                   textDecoration: 'none',
                   textTransform: 'uppercase',
+                  display: 'block',
+                  padding: '1.1rem 1.5rem',
                 }}
               >
                 {link.label}

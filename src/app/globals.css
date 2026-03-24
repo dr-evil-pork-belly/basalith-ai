@@ -29,3 +29,23 @@ body {
   cursor: none;
 }
 * { box-sizing: border-box; }
+
+@media (max-width: 768px) {
+  :root {
+    --bone: #F5F2EB;
+    --bone2: #E0DCD4;
+    --bone3: #C0BCB4;
+    --bone4: #8A8680;
+    --silver: #DEDAD2;
+    --silver2: #C0BCB4;
+    --silver3: #8A8680;
+  }
+
+  /* Section vertical padding compression */
+  #what  { padding-top: 3rem !important; padding-bottom: 3rem !important; padding-left: 1.25rem !important; padding-right: 1.25rem !important; max-width: 100% !important; }
+  #phases    { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  #entity    { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+  #modes     { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  #ecosystem { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  #creed     { padding: 4rem 1.25rem !important; }
+}
