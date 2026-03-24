@@ -80,18 +80,18 @@ function CardCanvas({ seed }: { seed: number }) {
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 const ENTITIES = [
-  { id: '00001', years: 41, tier: 'Deep',     initialized: 2024, phase: 'I',  progress: 30.4 },
-  { id: '00004', years: 73, tier: 'Legacy',   initialized: 2024, phase: 'II', progress: 54.1 },
-  { id: '00007', years: 28, tier: 'Enhanced', initialized: 2024, phase: 'I',  progress: 20.7 },
-  { id: '00009', years: 56, tier: 'Deep',     initialized: 2024, phase: 'I',  progress: 41.5 },
-  { id: '00012', years: 67, tier: 'Legacy',   initialized: 2024, phase: 'II', progress: 49.6 },
-  { id: '00015', years: 34, tier: 'Enhanced', initialized: 2024, phase: 'I',  progress: 25.2 },
-  { id: '00019', years: 89, tier: 'Legacy',   initialized: 2024, phase: 'II', progress: 65.9 },
-  { id: '00023', years: 12, tier: 'Basic',    initialized: 2024, phase: 'I',  progress:  8.9 },
-  { id: '00027', years: 45, tier: 'Deep',     initialized: 2024, phase: 'I',  progress: 33.3 },
-  { id: '00031', years: 78, tier: 'Legacy',   initialized: 2024, phase: 'II', progress: 57.8 },
-  { id: '00038', years: 19, tier: 'Enhanced', initialized: 2024, phase: 'I',  progress: 14.1 },
-  { id: '00044', years: 52, tier: 'Deep',     initialized: 2024, phase: 'I',  progress: 38.5 },
+  { id: '00001', years: 41, tier: 'Deep',     initialized: 2026, phase: 'I',  progress: 30.4 },
+  { id: '00004', years: 73, tier: 'Legacy',   initialized: 2026, phase: 'II', progress: 54.1 },
+  { id: '00007', years: 28, tier: 'Enhanced', initialized: 2026, phase: 'I',  progress: 20.7 },
+  { id: '00009', years: 56, tier: 'Deep',     initialized: 2026, phase: 'I',  progress: 41.5 },
+  { id: '00012', years: 67, tier: 'Legacy',   initialized: 2026, phase: 'II', progress: 49.6 },
+  { id: '00015', years: 34, tier: 'Enhanced', initialized: 2026, phase: 'I',  progress: 25.2 },
+  { id: '00019', years: 89, tier: 'Legacy',   initialized: 2026, phase: 'II', progress: 65.9 },
+  { id: '00023', years: 12, tier: 'Basic',    initialized: 2026, phase: 'I',  progress:  8.9 },
+  { id: '00027', years: 45, tier: 'Deep',     initialized: 2026, phase: 'I',  progress: 33.3 },
+  { id: '00031', years: 78, tier: 'Legacy',   initialized: 2026, phase: 'II', progress: 57.8 },
+  { id: '00038', years: 19, tier: 'Enhanced', initialized: 2026, phase: 'I',  progress: 14.1 },
+  { id: '00044', years: 52, tier: 'Deep',     initialized: 2026, phase: 'I',  progress: 38.5 },
 ]
 
 // ─── Card ─────────────────────────────────────────────────────────────────────

@@ -73,13 +73,13 @@ function EleanorAvatar({ size = 32 }: { size?: number }) {
 // ─── Types ─────────────────────────────────────────────────────────────────────
 type Message = { role: 'user' | 'assistant'; content: string }
 
-const INITIAL_MESSAGE = "I understand you want to speak with me. Go ahead — I have time."
+const INITIAL_MESSAGE = "I am 95 years old and it is 2026. I have seen enough to know that most questions are worth answering. Go ahead."
 
 const SUGGESTED = [
-  "What was the hardest year of your life?",
-  "What do you wish you'd done differently?",
-  "What made your business work?",
-  "What do you want us to remember?",
+  "What was 1974 like for you?",
+  "Tell me about Harold.",
+  "What do you wish you'd started sooner?",
+  "What do you know now that you didn't at 50?",
 ]
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -178,10 +178,10 @@ export default function EntityDemo() {
             Eleanor Voss
           </h2>
           <div style={{ fontFamily: 'var(--mono)', fontSize: '0.5rem', letterSpacing: '0.25em', color: 'var(--silver2)', textTransform: 'uppercase', marginBottom: '1rem' }}>
-            1931–2019 · 67 Years Provenance · Legacy Tier
+            Born 1931 · Age 95 · 1 Year Provenance · Basic Tier
           </div>
           <p style={{ fontFamily: 'var(--serif)', fontWeight: 300, fontStyle: 'italic', fontSize: '0.9rem', color: 'var(--bone4)', margin: 0, lineHeight: 1.6 }}>
-            This is a live demo entity. Eleanor was initialized in 2024 from a curated Provenance archive. Responses are generated in real time.
+            This is a live demo entity. Eleanor is 95. Her entity was initialized in 2025 by her daughter Patricia. Responses are generated in real time.
           </p>
         </motion.div>
 
@@ -204,9 +204,9 @@ export default function EntityDemo() {
         >
           {[
             { label: 'Entity Active', pulse: true },
-            { label: 'Legacy Tier' },
-            { label: '67 Yrs Provenance' },
-            { label: 'Wisdom Mode' },
+            { label: 'Basic Tier' },
+            { label: '1 Yr Provenance' },
+            { label: 'Mirror Mode' },
           ].map((item, i) => (
             <div
               key={item.label}

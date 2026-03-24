@@ -101,7 +101,7 @@ export default function Creed() {
             Basalith · AI · Digital Immortality
           </div>
           <div style={{ fontFamily: 'var(--mono)', fontSize: '0.44rem', letterSpacing: '0.2em', color: 'var(--bone4)', textTransform: 'uppercase' }}>
-            Initialized 2024 · Running forever
+            Initialized 2026 · Running forever
           </div>
         </motion.div>
       </div>

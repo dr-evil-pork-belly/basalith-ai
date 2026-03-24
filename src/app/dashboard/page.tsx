@@ -228,7 +228,7 @@ function Sidebar({ activeSection, setActiveSection }: { activeSection: string; s
       {/* Footer */}
       <div style={{ padding: '1rem 1.5rem', borderTop: '1px solid rgba(240,237,230,0.10)' }}>
         <div style={{ fontFamily: 'var(--mono)', fontSize: '0.36rem', letterSpacing: '0.1em', color: 'var(--bone4)', lineHeight: 1.6 }}>
-          Entity initialized March 2024 · Running on Basalith Foundation v2 · Next migration est. 2026
+          Entity initialized March 2026 · Running on Basalith Foundation v2 · Next migration est. 2028
         </div>
       </div>
     </aside>
@@ -575,9 +575,9 @@ function SidePanel() {
         {[
           { key: 'Current', val: 'Foundation v2' },
           { key: 'Training', val: 'Up to date', green: true },
-          { key: 'Next migration', val: 'Est. Q2 2026' },
+          { key: 'Next migration', val: 'Est. Q2 2028' },
           { key: 'Total queries', val: '4,291' },
-          { key: 'Running since', val: 'March 2024' },
+          { key: 'Running since', val: 'March 2026' },
         ].map((row) => (
           <div key={row.key} style={{ display: 'flex', justifyContent: 'space-between', padding: '0.45rem 0', borderBottom: '1px solid rgba(240,237,230,0.08)' }}>
             <span style={{ fontFamily: 'var(--mono)', fontSize: '0.4rem', letterSpacing: '0.15em', color: 'var(--bone4)', textTransform: 'uppercase' }}>{row.key}</span>

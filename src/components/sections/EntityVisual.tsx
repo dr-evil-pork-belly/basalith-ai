@@ -151,8 +151,8 @@ function NeuralCanvas({ className }: { className?: string }) {
 }
 
 const stats = [
-  { label: 'Entity ID', value: 'BSL-AI-2024-0000001', highlight: false },
-  { label: 'Source Deed', value: 'BSL-2024-0000001', highlight: false },
+  { label: 'Entity ID', value: 'BSL-AI-2026-0000001', highlight: false },
+  { label: 'Source Deed', value: 'BSL-2026-0000001', highlight: false },
   { label: 'Training Depth', value: '12 Years · Expanding', highlight: true },
   { label: 'Model Tier', value: 'Enhanced', highlight: true },
   { label: 'Current Model', value: 'Basalith Foundation v2', highlight: false },
@@ -162,9 +162,9 @@ const stats = [
 ]
 
 const timeline = [
-  { year: '2024', desc: 'Entity initialized · Foundation model' },
-  { year: '2026', desc: 'First major migration · Voice synthesis' },
-  { year: '2031', desc: 'Deep tier unlocked · 7 years provenance' },
+  { year: '2026', desc: 'Entity initialized · Foundation model' },
+  { year: '2028', desc: 'First major migration · Voice synthesis' },
+  { year: '2033', desc: 'Deep tier unlocked · 7 years provenance' },
   { year: '∞', desc: 'Continuous evolution · Model improves · Data compounds' },
 ]
 

@@ -94,7 +94,7 @@ export default function Footer() {
         </div>
 
         <span style={{ fontFamily: 'var(--mono)', fontSize: '0.42rem', letterSpacing: '0.2em', color: 'rgba(58,56,48,0.4)', textTransform: 'uppercase' }}>
-          © 2024 Basalith Sovereign Title Corp.
+          © 2026 Basalith Sovereign Title Corp.
         </span>
       </div>
     </footer>
